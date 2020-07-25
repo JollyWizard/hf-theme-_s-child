@@ -1,0 +1,9 @@
+@import 'global-vars';
+
+body {
+  background:var(--body-background, black);
+  color:var(--font, white);
+  margin-top:0rem;
+}
+
+/**/

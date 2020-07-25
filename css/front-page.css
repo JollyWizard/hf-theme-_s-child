@@ -1,0 +1,37 @@
+
+.intro{
+	position:relative;
+	display:block;
+	max-width:50em;
+	margin:0em auto;
+}
+
+.blurb {
+	padding:.5em;
+	text-align:center;
+	border: 1em solid transparent;
+	border-radius:1em;
+	background-image: radial-gradient(black 90%,transparent);
+	border-image-slice:1;
+}
+
+
+.headshot {
+	display:block;
+	border-radius:1em;
+	max-height:30em;
+	max-width: 100%;
+	margin:1em auto;
+	max-height:50vh;
+}
+
+.caption {
+	color:lightgrey;
+  background:radial-gradient(black 90%, transparent);
+	border-radius:1em;
+	display:inline-block;
+	max-width:30em;
+	padding:1em;
+
+	font-size: 1.25em;
+}

@@ -1,0 +1,6 @@
+:root
+{
+  --body-background:linear-gradient(90deg, black, lightgrey, black);
+  --site-header-background: linear-gradient(black calc(100% - 2em), transparent);
+  --font:white;
+}

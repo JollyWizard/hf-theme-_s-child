@@ -1,0 +1,32 @@
+
+/*
+  Navigation links at bottom of posts/sessions and search pages.
+*/
+.navigation.post-navigation
+, .navigation.posts-navigation
+{
+  margin: 1em;
+
+  /* 7/10 split. */
+  .nav-links
+  {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    a {
+      animation:none;
+      padding: .5em;
+      box-shadow: black 0em .5em 1em;
+
+      text-transform: uppercase;
+    }
+
+    .nav-previous a { border-radius: 1em 0em 0em 1em; }
+    .nav-next     a { border-radius: 0em 1em 1em 0em; }
+  }
+
+  /* Hide screen reader text. */
+  .screen-reader-text { display: none; }
+}

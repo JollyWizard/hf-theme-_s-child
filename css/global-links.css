@@ -1,0 +1,35 @@
+
+a:visited, a:active
+{
+  color:inherit;
+}
+
+a, a:visited, a:hover, a:active
+{
+  outline-offset:inherit;
+  color:inherit;
+  text-decoration:none;
+  -moz-outline-radius:1em;
+  outline-offset:.25em;
+}
+
+@keyframes a_hover {
+    from {
+      text-shadow:none;
+      outline: 1.5em ridge rgba(0,0,0,0);
+      color:inherit;
+    }
+    to {
+      text-shadow: 0 0 1rem #FFF;
+      outline: .25em ridge rgba(255,255,255,.11);
+      color: gold;
+    }
+}
+
+a:hover
+{
+  animation-name: a_hover;
+  animation-duration: 1.7s;
+  animation-timing-function:ease;
+  animation-fill-mode: forwards;
+}

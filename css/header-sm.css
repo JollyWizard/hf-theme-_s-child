@@ -1,0 +1,40 @@
+.site-header {
+  text-align:center;
+
+  display: flex;
+  flex-direction:column;
+
+  align-items: center;
+  justify-content: space-around;
+
+  div.site-branding {
+    h1.site-title, p.site-title {}
+    p.site-description {}
+  }
+
+  nav.main-navigation {
+     button.menu-toggle {
+       display:none;
+     }
+
+     div.menu-site-navigation-container {
+       ul.menu.nav-menu {}
+       li.menu-item {
+         display:flex;
+         a {flex-basis:90%;}
+       }
+     }
+
+     &.toggled {
+       .menu-site-navigation-container {
+         ul.menu.nav-menu {}
+         li.menu-item {}
+       }
+     }
+  }
+
+  /**/
+  &, & * { border:none; }
+  /**/
+
+}

@@ -1,0 +1,80 @@
+@import 'menu-toggle-button';
+
+.site-header
+{
+  background: var(--site-header-background);
+  /* All header text is bold. */
+  font-weight:bold;
+  padding-bottom: 2rem;
+
+  div.site-branding
+  {
+    h1.site-title, p.site-title
+    {
+      text-align: center;
+      font-size:3rem;
+      font-weight: bold;
+      margin:1em;
+
+      a {}
+    }
+
+    p.site-description
+    {
+      display:none;
+    }
+  }
+
+  nav.main-navigation
+  {
+    font-size: 1.5rem;
+
+     button.menu-toggle
+     {
+       @extend .menu-toggle-button;
+
+       font-size: .5em;
+       padding:1em;
+
+       height:6em;
+       width:6em;
+
+       background:lightgrey;
+     }
+
+     div.menu-site-navigation-container
+     {
+       text-align:center;
+
+       ul.menu.nav-menu
+       {
+         list-style: none;
+         padding: 0;
+         margin: 0;
+       }
+
+       li.menu-item
+       {
+         a {
+           padding: .25em 0em;
+           margin: .5em 1em;
+         }
+       }
+     }
+   }
+
+   /** Search Bar */
+   form.search-form {
+     input.search-field {}
+   }
+}
+
+
+/******************************
+  Round corners for everybody!
+*******************************/
+.site-title
+, .menu-toggle
+{
+  border-radius: 1em;
+}

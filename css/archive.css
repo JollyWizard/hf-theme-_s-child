@@ -1,0 +1,32 @@
+
+.session.archive {
+	--fade-width: 1rem;
+	@extend .content-fade;
+}
+
+.archive .session-links {
+	display:grid;
+	grid-template-columns: repeat(auto-fill, minmax(3em, max-content));
+	grid-gap:1rem;
+	justify-content: center;
+	align-items: center;
+}
+
+.page-title {
+  padding: 1em;
+	--fade-width:2rem;
+	@extend .content-fade;
+}
+
+.session-links a {
+	font-size: 1.5rem;
+	width:2em;
+	height:2em;
+	font-weight: bold;
+	padding: .5em 0em;
+	margin: .5em;
+}
+
+.archive .session-links a {
+	text-align:center;
+}

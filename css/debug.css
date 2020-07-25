@@ -1,0 +1,10 @@
+
+.DEBUG {
+  &, * {
+    border: .5vh dotted red;
+
+    @screen sm {border-color: purple;}
+    @screen md {border-color: green;}
+    @screen lg {border-color: blue;}
+  }
+}

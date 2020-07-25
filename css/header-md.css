@@ -1,0 +1,54 @@
+.site-header {
+ @screen md {
+
+  display: grid;
+
+  grid-template:
+   [row1-start] "branding search" [row1-end]
+   [row2-start] "menu menu" [row2-end]
+   / 1fr 1fr
+  ;
+
+  div.site-branding {
+    grid-area: branding;
+
+    h1.site-title, p.site-title {}
+    p.site-description {}
+  }
+
+  nav.main-navigation {
+    grid-area: menu;
+
+    display:flex;
+    flex-direction:row;
+    justify-content: space-around;
+
+     button.menu-toggle {}
+
+     div.menu-site-navigation-container {
+       flex-basis:100%;
+       margin-bottom: 1em;
+
+       ul.menu.nav-menu {
+         display:flex;
+         justify-content: space-around;
+       }
+
+       li.menu-item {}
+     }
+
+     &.toggled {
+       .menu-site-navigation-container {
+         ul.menu.nav-menu {}
+         li.menu-item {}
+       }
+     }
+  }
+
+  form.search-form {
+    grid-area: search;
+    input.search-field {}
+  }
+
+ }
+}

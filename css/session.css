@@ -1,0 +1,24 @@
+
+
+.session {
+  font-size:1.25em;
+  letter-spacing: .15em;
+
+  .entry-title {
+    text-align:center;
+    display:block;
+    margin:1em;
+  }
+
+  p {
+    padding:1em 0em;
+    line-height:1.5em;
+  }
+
+  br {
+    display: block;
+    margin-bottom: 1em;
+    font-size:1em;
+    line-height: 1em;
+  }
+}

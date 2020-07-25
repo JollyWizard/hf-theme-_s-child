@@ -1,0 +1,25 @@
+form.search-form {
+  display:flex;
+  justify-content: space-around;
+
+  label
+  {
+    .screen-reader-text {display:none;}
+
+    input.search-field {
+      width: 100%;
+      background:darkgray;
+      padding:.5em 1em;
+      border-radius:1em;
+
+      &::placeholder {
+        font-weight:bolder;
+        color:rgba(0,0,0,.7);
+      }
+
+      &:focus {
+        background:white;
+      }
+    }
+  }
+}

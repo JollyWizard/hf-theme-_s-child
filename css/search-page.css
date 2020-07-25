@@ -1,0 +1,52 @@
+
+.relevanssi-query-term {
+  background: var(--search-term-background, rgba(255,255,255,.15));
+  border-radius: var(--search-term-radius, .5em);
+  padding: var(--search-term-padding, .15em .5em);
+}
+
+body.search-results article {
+  margin-block: 1em;
+}
+
+.no-results {
+
+  .page-content {
+    padding: 1em;
+    --fade-width:1rem;
+    @extend .content-fade;
+
+    p {
+      text-align:center;
+      padding-bottom: 1em;
+    }
+  }
+
+  form.search-form {
+    display:flex;
+    justify-content: space-around;
+
+    label
+    {
+      width: 50%;
+
+      .screen-reader-text {display:none;}
+
+      input.search-field {
+        width: 100%;
+        background:darkgray;
+        padding:.5em 1em;
+        border-radius:1em;
+
+        &::placeholder {
+          font-weight:bolder;
+          color:rgba(0,0,0,.7);
+        }
+
+        &:focus {
+          background:white;
+        }
+      }
+    }
+  }
+}

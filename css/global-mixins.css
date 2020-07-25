@@ -1,0 +1,10 @@
+.content-fade {
+  background:linear-gradient(
+      90deg
+    , transparent
+    , black var(--fade-width, 1em)
+    , black calc(100% - var(--fade-width, 1em))
+    , transparent
+    );
+  border-radius: 1em;
+}
