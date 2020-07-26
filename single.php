@@ -6,35 +6,32 @@
  *
  * @package _s
  */
+?>
+</php get_header(); ?>
 
-get_header(); ?>
-
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
-
+	<div class="site-content-area">
 		<?php
-		while ( have_posts() ) : the_post();
+            while ( have_posts() ) : the_post();
 
-      $type = get_post_type();
-			$format = get_post_format();
+                $type = get_post_type();
+                $format = get_post_format();
 
-			locate_template( array(
-				"template-parts/content-$type-$format.php"
-			,	"template-parts/content-$type.php"
-			, "template-parts/content-$format.php"
-			, "template-parts/content.php"
-		  )
-			, true	// Autoload
-		  );
+                locate_template( 
+                    array(
+                        "template-parts/content-$type-$format.php"
+                    ,   "template-parts/content-$type.php"
+                    ,   "template-parts/content-$format.php"
+                    ,   "template-parts/content.php"
+                    )
+                ,   true	// Autoload
+                );
 
-			the_post_navigation();
+                the_post_navigation();
 
-		endwhile; // End of the loop.
+            endwhile;
 		?>
-
-		</main><!-- #main -->
-	</div><!-- #primary -->
+	</div>
 
 <?php
-get_sidebar();
-get_footer();
+    get_sidebar();
+    get_footer();

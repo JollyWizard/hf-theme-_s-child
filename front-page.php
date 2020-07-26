@@ -1,6 +1,4 @@
-<?php
-get_header();
-?>
+<?php get_header(); ?>
 
 <section class='intro'>
 	<figure class='blurb' />
@@ -13,6 +11,4 @@ get_header();
 	</figure>
 </section>
 
-<?php
-get_footer();
-?>
+<?php get_footer(); ?>
