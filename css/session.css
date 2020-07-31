@@ -7,7 +7,7 @@
 
     padding: 2em;
 
-    .entry-title 
+    .session-title 
     {
         @extend .font-aura;
         text-align:center;
@@ -15,7 +15,23 @@
         padding:1em;
     }
 
-    .entry-content
+    .wp-meta-aside
+    {
+        display:none;
+    }
+
+    .soundcloud-aside
+    {
+        @extend .sandwich-border;
+        background:var(--aura-color);
+        width:calc(100% - 4em);
+        margin:2rem;
+        padding:.5em;
+        border-radius:1em;
+        filter:opacity(75%);
+    }
+
+    .session-text
     {
         p {
             padding:1em 0em;
@@ -28,5 +44,10 @@
             font-size:1em;
             line-height: 1em;
         }
+    }
+
+    .page-navigation
+    {
+        // needs to be redone to match new php template.
     }
 }

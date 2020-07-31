@@ -1,67 +1,61 @@
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-	</header><!-- .entry-header -->
+<article 
+	class="session-article" 
+	data-wp-post-class="<?php post_class(); ?>" 
+	data-wp-post-id="<?php the_ID(); ?>"
+>
+	<header class="session-title">
+		<?php the_title(); ?>
+	</header>
 
-  <aside class='post-meta' style='display:none;'>
-    <?php
-      $metadata = get_metadata('post', get_the_ID());
-      foreach($metadata as $meta_key => $meta_value)
-      {
-        echo("<dt>$meta_key</dt>");
-        foreach($meta_value as $meta_element)
-        {
-          echo "<dd>$meta_element</dd>";
-        }
-      }
-    ?>
-  </aside>
-
-  <aside class='soundcloud-widgets' >
-    <?php
-		  $sc_widget_base = 'https://w.soundcloud.com/player/?url=';
-      $sc_urls = get_metadata('post', get_the_ID(), 'soundcloud_url');
-
-      foreach($sc_urls as $sc_url)
-      {
-				$widget_url = $sc_widget_base.$sc_url;
-        echo "<iframe src='$widget_url' width='100%'></iframe>";
-      }
-    ?>
-  </aside>
-
-	<div class="entry-content">
+	<aside class='wp-meta-aside'>
+		<dl class='wp-meta-list'>
 		<?php
-			the_content();
+			$metadata = get_metadata('post', get_the_ID());
+		
+			//@TODO: Filter metadata list (possible admin view).
 
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', '_s' ),
-				'after'  => '</div>',
-			) );
-		?>
-	</div><!-- .entry-content -->
+			foreach($metadata as $meta_key => $meta_value)
+			{
+				echo("<dt class='wp-meta-key'>$meta_key</dt>");
+				
+				foreach($meta_value as $meta_element)
+				{
+					echo "<dd wp='wp-meta-value>$meta_element</dd>";
+				}
+			}
+		?>	
+		</dl>
+	</aside>
 
-	<?php if ( get_edit_post_link() ) : ?>
-		<footer class="entry-footer">
-			<?php
-				edit_post_link(
-					sprintf(
-						wp_kses(
-							/* translators: %s: Name of current post. Only visible to screen readers */
-							__( 'Edit <span class="screen-reader-text">%s</span>', '_s' ),
-							array(
-								'span' => array(
-									'class' => array(),
-								),
-							)
-						),
-						get_the_title()
-					),
-					'<span class="edit-link">',
-					'</span>'
-				);
-			?>
-		</footer><!-- .entry-footer -->
-	<?php endif; ?>
-</article><!-- #post-<?php the_ID(); ?> -->
+	<aside class='soundcloud-aside' >
+	<?php
+		$sc_widget_base = 'https://w.soundcloud.com/player/?url=';
+		$sc_urls = get_metadata('post', get_the_ID(), 'soundcloud_url');
+
+		foreach($sc_urls as $sc_url)
+		{
+			echo '<div class="soundcloud-widget-div">';
+				$widget_url = $sc_widget_base.$sc_url;
+				echo "<iframe class='soundcloud-widget-iframe' src='$widget_url' width='100%'></iframe>";
+			echo '</div>';
+		}
+	?>
+	</aside>
+
+	<main class="session-text">
+		<?php the_content(); ?>
+	</main>
+
+	<nav class="page-navigation" >
+	<?php
+		wp_link_pages( 
+			array(
+				'before' => ''
+			,	'after'  => ''
+			) 
+		);
+	?>
+	</div>
+
+</article>

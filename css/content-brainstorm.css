@@ -11,40 +11,21 @@
 {
   background-color:var(--content-bg);
 
+  /** 
+    `vw` units for `--fade-width` makes the content fade proportional to screen size. 
+    Small screens hold more letters.
+    Large screens more visual depth.
+  */
   --fade-width: 2vw;
   @extend .content-fade;
 }
 
-.site-content .widget-area {display:none;}
-
-.soundcloud-widgets *
-{
-  @extend .sandwich-border;
-  margin:2rem;
-  padding:.5em;
-  width:calc(100% - 4em);
-  border-radius:1em;
-  background:var(--aura-color);
-  filter:opacity(75%);
-}
-
-.content.site-content
-{
-  min-height: 100%;
-}
-
-.content-area
-{
-  margin-bottom:1em;
-}
-
-
-#masthead
+.site-header
 {
   --aura-color: red ;
 }
 
-article.session
+.session
 {
   --aura-color: #0000ff5c;
   --font-aura-blur:.1em;

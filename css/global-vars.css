@@ -3,7 +3,6 @@
 :root 
 {
   --body-background:linear-gradient(90deg, black, lightgrey, black);
-  --site-header-background: linear-gradient(black calc(100% - 2em), transparent);
   --font:white;
 }
 */
@@ -13,7 +12,7 @@
 {
   --font-color:white;
 
-  --header-bg-color: black;
+  --site-header-bg-color: black;
   --content-bg-color: black;
   /**/--aura-color: gold;/**/
   /**/--aura-color: rgba(255, 179, 0, 0.49); /* muted gold, brassy */
@@ -34,4 +33,13 @@
 
   --html-bg: radial-gradient(black, red, green,orange,blue,black);
 
+}
+
+/**
+  Site Header
+*/
+:root
+{
+  --site-header-background: linear-gradient(var(--site-header-bg-color) calc(100% - var(--site-header-fade-width), transparent);
+  --site-header-fade-width: 2em;
 }

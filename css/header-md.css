@@ -4,16 +4,13 @@
   display: grid;
 
   grid-template:
-   [row1-start] "branding search" [row1-end]
+   [row1-start] "title search" [row1-end]
    [row2-start] "menu menu" [row2-end]
    / 1fr 1fr
   ;
 
-  div.site-branding {
-    grid-area: branding;
-
-    h1.site-title, p.site-title {}
-    p.site-description {}
+  .site-title {
+    grid-area: title;
   }
 
   nav.main-navigation {

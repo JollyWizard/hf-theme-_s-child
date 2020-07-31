@@ -2,79 +2,66 @@
 
 .site-header
 {
-  background: var(--header-bg);
-  /* All header text is bold. */
-  font-weight:bold;
-  padding-bottom: 2rem;
+    background: var(--site-header-background);
+    
+    padding-bottom: var(--site-header-fade-width);
 
-  div.site-branding
-  {
-    h1.site-title, p.site-title
+    /* All header text is bold. */
+    font-weight:bold;
+
+    .site-title
     {
-      text-align: center;
-      font-size:3rem;
-      font-weight: bold;
-      margin:1em;
+        text-align: center;
+        font-size:3rem;
+        font-weight: bold;
+        margin:1em;
 
-      a {}
+        .site-title-link {}
     }
 
-    p.site-description
+    .site-navigation
     {
-      display:none;
+        font-size: 1.5rem;
+        
+        .menu-toggle {
+            @extend .menu-toggle-button;
+            font-size: .5em;
+            padding:1em;
+
+            height:6em;
+            width:6em;
+
+            background:lightgrey;
+
+            display:none;
+        }
     }
-  }
 
-  nav.main-navigation
-  {
-    font-size: 1.5rem;
+    .site-navigation
+    {
+        text-align:center;
 
-     button.menu-toggle
-     {
-       @extend .menu-toggle-button;
+        .menu.nav-menu
+        {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
 
-       font-size: .5em;
-       padding:1em;
+        .menu-item
+        {
+            a
+            {
+                padding: .25em 0em;
+                margin: .5em 1em;
+            }
+        }
+    }
 
-       height:6em;
-       width:6em;
-
-       background:lightgrey;
-     }
-
-     div.menu-site-navigation-container
-     {
-       text-align:center;
-
-       ul.menu.nav-menu
-       {
-         list-style: none;
-         padding: 0;
-         margin: 0;
-       }
-
-       li.menu-item
-       {
-         a {
-           padding: .25em 0em;
-           margin: .5em 1em;
-         }
-       }
-     }
-   }
-
-   /** Search Bar */
-   form.search-form {
-     input.search-field {}
-   }
-}
-
-
-/******************************
-  Round corners for everybody!
-*******************************/
-.site-title
-, .menu-toggle
-{
-  border-radius: 1em;
+    .site-search
+    {
+        form.search-form {
+            input.search-field {}
+        }
+    }
 }

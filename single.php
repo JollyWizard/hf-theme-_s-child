@@ -7,7 +7,7 @@
  * @package _s
  */
 ?>
-</php get_header(); ?>
+<?php get_header(); ?>
 
 	<div class="site-content-area">
 		<?php
