@@ -1,0 +1,41 @@
+:root, * {
+  --scrollbar-bg: var(--aura-color);
+  --thumb-bg: var(--aura-color);
+}
+
+/* Firefox scrollbar defaults */
+
+html, * {
+  scrollbar-width: thin;
+  scrollbar-color: var(--thumb-bg) var(--scrollbar-bg);
+}
+
+
+/* Chrome / Safari */
+
+/* activates scrollbar support */
+*::-webkit-scrollbar {
+  width: 1rem;
+}
+
+:root
+{
+  background-color:var(--content-bg-color);
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 1em;
+}
+
+*::-webkit-scrollbar-track-piece {
+
+}
+
+*::-webkit-scrollbar-thumb {
+  background: linear-gradient(  var(--content-bg-color) 10% , var(--aura-color), var(--content-bg-color) 90%)
+}
+
+*:hover::webkit-scrollbar-thumb:vertical:hover {
+  border: 1em ridge var(--aura-color);
+}

@@ -16,20 +16,20 @@ a, a:visited, a:hover, a:active
 @keyframes a_hover {
     from {
       text-shadow:none;
-      outline: 1.5em ridge rgba(0,0,0,0);
+      outline: .0em ridge var(--aura-color);
       color:inherit;
     }
     to {
-      text-shadow: 0 0 1rem #FFF;
-      outline: .25em ridge rgba(255,255,255,.11);
-      color: gold;
+      text-shadow: 0 0 1rem var(--aura-color);
+      outline: .5em ridge transparent;
+      color: var(--aura-color);
     }
 }
 
 a:hover
 {
   animation-name: a_hover;
-  animation-duration: 1.7s;
+  animation-duration: 2s;
   animation-timing-function:ease;
   animation-fill-mode: forwards;
 }

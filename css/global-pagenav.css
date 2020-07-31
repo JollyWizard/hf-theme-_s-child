@@ -5,11 +5,14 @@
 .navigation.post-navigation
 , .navigation.posts-navigation
 {
+  width:95%;
   margin: 1em;
 
   /* 7/10 split. */
   .nav-links
   {
+    padding:1em;
+    line-height:3em;
     width: 100%;
     display: flex;
     align-items: center;
@@ -18,8 +21,8 @@
     a {
       animation:none;
       padding: .5em;
-      box-shadow: black 0em .5em 1em;
-
+      box-shadow: var(--aura-color) 0em .5em .25em;
+      border:thin solid var(--aura-color);
       text-transform: uppercase;
     }
 

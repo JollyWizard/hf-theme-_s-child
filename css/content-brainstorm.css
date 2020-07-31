@@ -3,22 +3,49 @@
 /**/
 .site-content
 {
-  padding:1em 5%;
+  padding: 2em 5%;
 }
 /**/
 
-.session
+.content-area
 {
-  --fade-width: 1em;
+  background-color:var(--content-bg);
+
+  --fade-width: 2vw;
   @extend .content-fade;
-  padding: 1em 4em;
-}
-
-
-.site-content h1
-, .site-content h2
-{
-  margin:0 0;
 }
 
 .site-content .widget-area {display:none;}
+
+.soundcloud-widgets *
+{
+  @extend .sandwich-border;
+  margin:2rem;
+  padding:.5em;
+  width:calc(100% - 4em);
+  border-radius:1em;
+  background:var(--aura-color);
+  filter:opacity(75%);
+}
+
+.content.site-content
+{
+  min-height: 100%;
+}
+
+.content-area
+{
+  margin-bottom:1em;
+}
+
+
+#masthead
+{
+  --aura-color: red ;
+}
+
+article.session
+{
+  --aura-color: #0000ff5c;
+  --font-aura-blur:.1em;
+}

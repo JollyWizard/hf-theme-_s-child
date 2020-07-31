@@ -1,6 +1,37 @@
-:root
+
+/** v1.0 Site background scheme.
+:root 
 {
   --body-background:linear-gradient(90deg, black, lightgrey, black);
   --site-header-background: linear-gradient(black calc(100% - 2em), transparent);
   --font:white;
+}
+*/
+
+/* var(color) vibrant scheme brainstorm. */
+:root
+{
+  --font-color:white;
+
+  --header-bg-color: black;
+  --content-bg-color: black;
+  /**/--aura-color: gold;/**/
+  /**/--aura-color: rgba(255, 179, 0, 0.49); /* muted gold, brassy */
+  /**/--aura-color: #ac07077d; /* warm pink partially transparent */
+
+  /** Default fade width for `.content-fade` edges. */
+  --default-fade-width: 1em;
+
+  /* Font aura parameters for `.font-aura`  type texts. */
+  --font-aura-offset: .15em .15em;
+  --font-aura-blur: .1em;
+
+  /* backgronds for areas.*/
+  --html-bg: radial-gradient(black,red,green);
+  --header-bg: linear-gradient(var(--header-bg-color) calc(100% - 2em), transparent);
+  --body-bg: linear-gradient(90deg, var(--content-bg-color), var(--aura-color), var(--content-bg-color));
+  --body-bg: linear-gradient(90deg, var(--aura-color) 10%, var(--content-bg-color) 50%, var(--aura-color) 90%);
+
+  --html-bg: radial-gradient(black, red, green,orange,blue,black);
+
 }

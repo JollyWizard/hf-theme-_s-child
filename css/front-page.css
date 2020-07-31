@@ -1,4 +1,7 @@
 
+/**
+  This is the outer container for the headshot/caption.
+*/
 .intro{
 	position:relative;
 	display:block;
@@ -6,13 +9,19 @@
 	margin:0em auto;
 }
 
+/**
+	This is the inner container for the headshot / caption
+*/
 .blurb {
+	@extend .font-aura;
 	padding:.5em;
 	text-align:center;
-	border: 1em solid transparent;
+
 	border-radius:1em;
-	background-image: radial-gradient(black 90%,transparent);
-	border-image-slice:1;
+	border-width:1em;
+	border-color:transparent;
+
+	background-image: radial-gradient(var(--content-bg-color) 90%,transparent);
 }
 
 
@@ -27,7 +36,6 @@
 
 .caption {
 	color:lightgrey;
-  background:radial-gradient(black 90%, transparent);
 	border-radius:1em;
 	display:inline-block;
 	max-width:30em;

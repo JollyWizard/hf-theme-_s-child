@@ -2,7 +2,7 @@
 
 .site-header
 {
-  background: var(--site-header-background);
+  background: var(--header-bg);
   /* All header text is bold. */
   font-weight:bold;
   padding-bottom: 2rem;

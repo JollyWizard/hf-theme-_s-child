@@ -2,9 +2,25 @@
   background:linear-gradient(
       90deg
     , transparent
-    , black var(--fade-width, 1em)
-    , black calc(100% - var(--fade-width, 1em))
+    , var(--content-bg-color) var(--fade-width, var(--default-fade-width))
+    , var(--content-bg-color) calc(100% - var(--fade-width, var(--default-fade-width)))
     , transparent
     );
-  border-radius: 1em;
+  border-radius: .75em;
+}
+
+.sandwich-border
+{
+  border-top:1em ridge var(--aura-color);
+  border-bottom:1em ridge var(--aura-color);
+}
+
+.font-aura
+{
+  text-shadow: var(--font-aura-offset) var(--font-aura-blur)  var(--aura-color);
+}
+
+.wide-font
+{
+  letter-spacing:1em;
 }

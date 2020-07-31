@@ -1,0 +1,38 @@
+
+.session
+{
+    .page-links
+    {
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:space-around;
+
+      --aura-color:gold;
+
+      .page-links-title, .no
+      {
+        line-height:3em;
+        margin:1em;
+        padding:1em;
+        background:linear-gradient(blue,green);
+        border-radius:50%;
+        filter:drop-shadow(.1em .1em 0px var(--aura-color))
+              opacity(25%);
+        ;
+
+        margin:1em 1em;
+        width:12.5%;
+        text-align:center;
+
+        &:hover
+        {
+          filter: opacity(100%)
+                  drop-shadow(.1em .1em .1em var(--aura-color))
+        }
+      }
+    }
+
+    .page-links a {
+        display:contents;
+    }
+}

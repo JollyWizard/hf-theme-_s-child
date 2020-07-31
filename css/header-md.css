@@ -27,7 +27,6 @@
 
      div.menu-site-navigation-container {
        flex-basis:100%;
-       margin-bottom: 1em;
 
        ul.menu.nav-menu {
          display:flex;

@@ -2,7 +2,7 @@
 Theme Name: _s-child (HigherForces)
 Author: James Arlow
 Description: Child theme designed against _s for HigherForces.com. Compiled with PostCSS and Tailwind.
-Version: 0.1.0
+Version: 0.2.0-dev
 Template: _s
 */
 
@@ -10,10 +10,6 @@ Template: _s
 @import 'tailwind-build';
 
 @import 'global';
-@import 'global-mixins';
-@import 'global-search';
-@import 'global-links';
-@import 'global-pagenav';
 
 @import 'layout-header';
 @import 'layout-footer';
@@ -21,8 +17,11 @@ Template: _s
 @import 'front-page';
 @import 'content-brainstorm';
 
-@import 'page-header';
-
 @import 'archive';
+
 @import 'session';
+@import 'session-page-links';
+
 @import 'search-page';
+
+@import 'scrollbars';

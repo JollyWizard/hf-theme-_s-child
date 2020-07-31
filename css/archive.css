@@ -1,32 +1,44 @@
 
-.session.archive {
-	--fade-width: 1rem;
-	@extend .content-fade;
-}
 
-.archive .session-links {
-	display:grid;
-	grid-template-columns: repeat(auto-fill, minmax(3em, max-content));
-	grid-gap:1rem;
-	justify-content: center;
-	align-items: center;
-}
 
-.page-title {
-  padding: 1em;
-	--fade-width:2rem;
-	@extend .content-fade;
-}
+.content-area.session-archive
+{
+	background:none;
 
-.session-links a {
-	font-size: 1.5rem;
-	width:2em;
-	height:2em;
-	font-weight: bold;
-	padding: .5em 0em;
-	margin: .5em;
-}
+	.page-header {
+		@extend .content-fade;
+		@extend .sandwich-border;
 
-.archive .session-links a {
-	text-align:center;
+		.page-title {
+			@extend .font-aura;
+			text-align: center;
+		  padding: 1em;
+		}
+
+		margin-bottom:1em;
+	}
+
+	.archive
+	{
+		@extend .content-fade;
+
+		padding:2em 3em;
+
+		.session-links {
+			display:grid;
+			grid-template-columns: repeat(auto-fill, minmax(4em, max-content));
+			grid-gap:2em;
+			justify-content: space-around;
+			align-items: center;
+			margin:1em 0em;
+
+			a
+			{
+				text-align:center;
+
+				font-size: 2rem;
+				font-weight: bold;
+			}
+		}
+	}
 }
