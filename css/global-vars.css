@@ -40,6 +40,6 @@
 */
 :root
 {
-  --site-header-background: linear-gradient(var(--site-header-bg-color) calc(100% - var(--site-header-fade-width), transparent);
+  --site-header-background: linear-gradient(var(--site-header-bg-color) calc(100% - var(--site-header-fade-width)), transparent);
   --site-header-fade-width: 2em;
 }
